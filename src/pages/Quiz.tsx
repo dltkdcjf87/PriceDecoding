@@ -146,13 +146,21 @@ const Quiz: React.FC = () => {
 
                 {/* 네비게이션 버튼 */}
                 <div className="quiz__navigation">
-                    <Button
-                        variant="outline"
-                        onClick={handlePrevious}
-                        disabled={currentQuestionIndex === 0}
-                    >
-                        ← 이전
-                    </Button>
+                    {currentQuestionIndex === 0 ? (
+                        <Button
+                            variant="outline"
+                            onClick={() => navigate('/')}
+                        >
+                            ← 홈으로
+                        </Button>
+                    ) : (
+                        <Button
+                            variant="outline"
+                            onClick={handlePrevious}
+                        >
+                            ← 이전
+                        </Button>
+                    )}
                     <Button
                         variant="primary"
                         onClick={handleNext}

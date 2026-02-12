@@ -1,0 +1,71 @@
+/* ========================================
+   Terms Page Styles
+   ======================================== */
+
+.terms {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    padding: var(--spacing-8) var(--spacing-4);
+}
+
+.terms__container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.terms__title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-accent-dark);
+    text-align: center;
+    margin-bottom: var(--spacing-4);
+}
+
+.terms__updated {
+    text-align: center;
+    color: var(--color-gray-600);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-8);
+}
+
+.terms__section {
+    margin-bottom: var(--spacing-8);
+}
+
+.terms__section h2 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-accent-dark);
+    margin-bottom: var(--spacing-4);
+    padding-bottom: var(--spacing-2);
+    border-bottom: 2px solid var(--color-highlight);
+}
+
+.terms__section p {
+    color: var(--color-gray-700);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-4);
+}
+
+.terms__section ul {
+    list-style: disc;
+    padding-left: var(--spacing-6);
+    margin-bottom: var(--spacing-4);
+}
+
+.terms__section li {
+    color: var(--color-gray-700);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-2);
+}
+
+/* 반응형 */
+@media (max-width: 767px) {
+    .terms__title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .terms__section h2 {
+        font-size: var(--font-size-xl);
+    }
+}

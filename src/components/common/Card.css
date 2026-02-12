@@ -1,0 +1,49 @@
+/* ========================================
+   Card Component Styles
+   ======================================== */
+
+.card {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-6);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+/* ===== 글래스모피즘 효과 ===== */
+.card--glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: var(--shadow-glass);
+}
+
+/* ===== 호버 효과 ===== */
+.card--hoverable:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ===== 클릭 가능 카드 ===== */
+.card--clickable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.card--clickable:active {
+    transform: translateY(-2px);
+}
+
+.card--clickable:focus-visible {
+    outline: 2px solid var(--color-highlight);
+    outline-offset: 2px;
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 767px) {
+    .card {
+        padding: var(--spacing-4);
+        border-radius: var(--radius-lg);
+    }
+}

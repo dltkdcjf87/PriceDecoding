@@ -1,0 +1,117 @@
+/* ========================================
+   Landing Page Styles
+   ======================================== */
+
+.landing {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    padding: var(--spacing-8) var(--spacing-4);
+}
+
+.landing__container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ===== 히어로 섹션 ===== */
+.landing__hero {
+    text-align: center;
+    margin-bottom: var(--spacing-16);
+}
+
+.landing__title {
+    font-size: var(--font-size-6xl);
+    font-weight: var(--font-weight-extrabold);
+    line-height: var(--line-height-tight);
+    color: var(--color-accent-dark);
+    margin-bottom: var(--spacing-6);
+}
+
+.landing__title-highlight {
+    background: linear-gradient(135deg, var(--color-highlight) 0%, var(--color-highlight-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.landing__subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--color-gray-600);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-8);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.landing__cta {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-4);
+}
+
+/* ===== 특징 섹션 ===== */
+.landing__features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-8);
+    margin-top: var(--spacing-12);
+}
+
+.landing__feature {
+    text-align: center;
+    padding: var(--spacing-8);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-2xl);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: var(--shadow-glass);
+    transition: all var(--transition-base);
+}
+
+.landing__feature:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.landing__feature-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-4);
+}
+
+.landing__feature-title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-accent-dark);
+    margin-bottom: var(--spacing-3);
+}
+
+.landing__feature-description {
+    font-size: var(--font-size-base);
+    color: var(--color-gray-600);
+    line-height: var(--line-height-relaxed);
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 767px) {
+    .landing__title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .landing__subtitle {
+        font-size: var(--font-size-lg);
+    }
+
+    .landing__features {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-6);
+    }
+
+    .landing__feature {
+        padding: var(--spacing-6);
+    }
+}

@@ -1,0 +1,123 @@
+/* ========================================
+   Button Component Styles
+   ======================================== */
+
+.button {
+    /* 기본 스타일 */
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-semibold);
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    text-align: center;
+
+    /* 호버 효과 */
+    &:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+
+    &:active:not(:disabled) {
+        transform: translateY(0);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-highlight);
+        outline-offset: 2px;
+    }
+}
+
+/* ===== 크기 변형 ===== */
+.button--sm {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-2) var(--spacing-4);
+    min-height: 32px;
+}
+
+.button--md {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-3) var(--spacing-6);
+    min-height: 44px;
+}
+
+.button--lg {
+    font-size: var(--font-size-lg);
+    padding: var(--spacing-4) var(--spacing-8);
+    min-height: 56px;
+}
+
+/* ===== 스타일 변형 ===== */
+.button--primary {
+    background: linear-gradient(135deg, var(--color-highlight) 0%, var(--color-highlight-dark) 100%);
+    color: var(--color-white);
+
+    &:hover:not(:disabled) {
+        background: linear-gradient(135deg, var(--color-highlight-dark) 0%, var(--color-highlight) 100%);
+    }
+}
+
+.button--secondary {
+    background: var(--color-accent);
+    color: var(--color-white);
+
+    &:hover:not(:disabled) {
+        background: var(--color-accent-light);
+    }
+}
+
+.button--outline {
+    background: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+
+    &:hover:not(:disabled) {
+        background: var(--color-accent);
+        color: var(--color-white);
+    }
+}
+
+/* ===== 전체 너비 ===== */
+.button--full-width {
+    width: 100%;
+}
+
+/* ===== 비활성화 상태 ===== */
+.button--disabled,
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* ===== 로딩 상태 ===== */
+.button--loading {
+    cursor: wait;
+    pointer-events: none;
+}
+
+.button__spinner {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+/* 스피너 애니메이션 */
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--color-white);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

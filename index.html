@@ -6,51 +6,136 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Price Decoder: 초합리적 소비자를 위한 가격 해독기 및 원가 분석 도구</title>
+  <title>Price Decoder: 스마트 소비를 위한 가격 분석 및 원가 계산기</title>
   <meta name="description"
-    content="가격표 뒤에 숨겨진 원가 구조, 유통 마진, 브랜드 프리미엄을 분석합니다. Price Decoder를 통해 지불 금액의 정당성을 검증하고 합리적인 소비 결정을 내리세요." />
-  <meta name="keywords" content="가격 분석, 원가 계산기, 소비 성향 분석, 브랜드 프리미엄 계산, 합리적 소비 가이드, 마진율 계산" />
+    content="지불하는 가격이 적정한지 고민되시나요? Price Decoder는 제조 원가, 유통 마진, 브랜드 프리미엄을 과학적으로 분석하여 합리적인 소비 결정을 돕는 전문 분석 도구입니다." />
+  <meta name="keywords" content="가격 분석, 원가 계산기, 마진율 계산, 합리적 소비, 브랜드 가치 분석, 가격 구조 해독" />
   <meta name="author" content="Price Decoder" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Price Decoder: 가격의 진실을 밝히는 스마트 소비 도구" />
-  <meta property="og:description" content="당신이 지불하는 가격, 적정한가요? 원가와 마진을 해독하여 스마트한 소비를 도와드립니다." />
+  <meta property="og:title" content="Price Decoder: 가격표 뒤의 진실을 확인하세요" />
+  <meta property="og:description" content="원가와 마진을 해독하여 당신의 지불 가치를 증명해 드립니다. 합리적 소비의 시작." />
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2851808506939477"
     crossorigin="anonymous"></script>
+
+  <style>
+    /* 기본적인 레이아웃 가시성을 위한 스타일 추가 */
+    body {
+      font-family: 'Pretendard', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      color: #222;
+    }
+
+    h2 {
+      border-left: 5px solid #007bff;
+      padding-left: 10px;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #eee;
+      font-size: 0.9rem;
+    }
+
+    .analysis-placeholder {
+      background: #f0f4f8;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px dashed #abc;
+    }
+  </style>
 </head>
 
 <body>
   <header>
     <h1>Price Decoder (가격 해독기)</h1>
     <nav>
-      <p>합리적 소비를 위한 가격 구조 분석 및 원가 계산 서비스를 제공합니다.</p>
+      <a href="/">홈</a>
+      <a href="#guide">분석 가이드</a>
+      <a href="#about">서비스 소개</a>
+      <a href="/privacy-policy">개인정보처리방침</a>
     </nav>
   </header>
 
   <main>
-    <div id="root">
-      <article style="padding: 20px; line-height: 1.6;">
-        <h2>왜 Price Decoder가 필요한가요?</h2>
-        <p>우리가 일상에서 마주하는 제품의 가격에는 단순 제조 원가뿐만 아니라 <strong>유통 마진, 마케팅 비용, 그리고 브랜드 프리미엄</strong>이 포함되어 있습니다. Price Decoder는
-          복잡한 가격 구조를 해독하여 소비자가 지불하는 금액이 그만한 가치가 있는지 판단할 수 있도록 돕습니다.</p>
+    <section id="about">
+      <h2>지불하는 가격의 정당성을 확인하세요</h2>
+      <p>우리가 매일 구매하는 제품의 가격은 어떻게 결정될까요? 단순히 제조 비용에 이윤을 붙이는 시대를 지나, 현재는 복잡한 유통망과 고도의 마케팅 비용이 가격의 큰 비중을 차지하고 있습니다.</p>
+      <p><strong>Price Decoder</strong>는 방대한 시장 데이터를 기반으로 제품의 가격 구조를 세분화하여 분석합니다. 소비자가 지불하는 '브랜드 값'이 실제로 품질에 기여하는지, 아니면
+        단순 마케팅 거품인지 명확한 지표를 제공합니다.</p>
+    </section>
 
-        <h3>주요 분석 기능</h3>
-        <ul>
-          <li><strong>원가 구조 추정:</strong> 원재료와 인건비 기반의 데이터 분석</li>
-          <li><strong>유통 마진율 계산:</strong> 단계별 유통 과정을 통한 가격 상승폭 확인</li>
-          <li><strong>브랜드 가치 측정:</strong> 동종 업계 대비 브랜드가 차지하는 프리미엄 분석</li>
-        </ul>
+    <section id="tool">
+      <h2>실시간 가격 분석 도구</h2>
+      <div id="root">
+        <div class="analysis-placeholder">
+          <p>종합 데이터 분석 엔진을 초기화하고 있습니다...</p>
+          <small>잠시만 기다려주시면 원가 분석 계산기가 로드됩니다.</small>
+        </div>
+      </div>
+    </section>
 
-        <p>현명한 소비자는 가격표 이상의 가치를 봅니다. 지금 바로 가격 해독기를 통해 합리적인 소비를 시작해 보세요.</p>
+    <section id="guide">
+      <h2>분석 기준 및 방법론</h2>
+      <article>
+        <h3>1. 원재료 및 제조 원가(COGS)</h3>
+        <p>글로벌 원자재 시세와 표준 인건비 데이터를 활용하여 해당 카테고리의 평균 제조 비용을 추정합니다.</p>
       </article>
-
-      <p style="text-align: center;">데이터 분석 엔진을 불러오는 중입니다...</p>
-    </div>
+      <article>
+        <h3>2. 유통 및 물류 비용</h3>
+        <p>온라인 쇼핑몰, 백화점, 편의점 등 각 채널별 표준 수수료와 물류 단계별 마진율을 계산에 반영합니다.</p>
+      </article>
+      <article>
+        <h3>3. 브랜드 프리미엄 지수</h3>
+        <p>동일 사양의 일반 제품(Generic) 대비 브랜드 제품의 가격 차이를 분석하여 브랜드 가치를 수치화합니다.</p>
+      </article>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Price Decoder. All rights reserved. | <a href="/privacy-policy">개인정보처리방침</a></p>
+    <p>&copy; 2026 Price Decoder. All rights reserved.</p>
+    <p>
+      <a href="/privacy-policy">개인정보처리방침</a> |
+      <a href="mailto:contact@yourdomain.com">문의하기</a>
+    </p>
   </footer>
 
   <script type="module" src="/src/main.tsx"></script>
